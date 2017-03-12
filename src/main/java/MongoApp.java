@@ -5,13 +5,13 @@ import org.bson.Document;
 
 import java.util.Date;
 
-public class App {
+public class MongoApp {
 
     public static void main(String[] args) {
         MongoClient mongoClient = new MongoClient("localhost", 27017);
         MongoDatabase mongoDatabase = mongoClient.getDatabase("mkyong");
         MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("users");
-        //insertDocument(mongoCollection);
+        insertDocument(mongoCollection);
         listDocuments(mongoCollection);
     }
 
